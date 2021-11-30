@@ -9,19 +9,13 @@ class PriorityQueue
 {
 public:
 
-	PriorityQueue()
-	{
-
-	}
+	PriorityQueue()	{}
 	~PriorityQueue()
 	{
 		// all data will be deleted when m_linkedList is deleted in LinkedList's destructor
 	}
 
-	LinkNode<T>* Begin()
-	{
-		return m_linkedList.Begin();
-	}
+
 	// removing the first element of the linked list
 	void Pop()
 	{

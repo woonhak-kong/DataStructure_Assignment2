@@ -23,7 +23,8 @@ int main()
 	list.Push(63, 5);
 
 
-	LinkNode<int>* tmp = list.Begin();
+	std::cout << "\n--------------- After Push ----------------" << std::endl;
+	LinkNode<int>* tmp = list.Front();
 	while (tmp)
 	{
 		std::cout << tmp->GetData() << "(" << tmp->GetPriority() << ") ";
@@ -36,8 +37,13 @@ int main()
 	list.Pop();
 	list.Pop();
 	list.Pop();
+	list.Pop();
+	list.Pop();
+	list.Pop();
+	list.Pop();
 
-	tmp = list.Begin();
+	std::cout << "\n--------------- After Pop 8 times ----------------" << std::endl;
+	tmp = list.Front();
 	while (tmp)
 	{
 		std::cout << tmp->GetData() << "(" << tmp->GetPriority() << ") ";
@@ -46,12 +52,10 @@ int main()
 	std::cout << "Size = " << list.GetSize() << std::endl;
 
 
-	list.Pop();
-	list.Pop();
-	list.Pop();
-	list.Pop();
+	std::cout << "\n--------------- After Push 50(50) ----------------" << std::endl;
+	list.Push(50, 50);
 
-	tmp = list.Begin();
+	tmp = list.Front();
 	while (tmp)
 	{
 		std::cout << tmp->GetData() << "(" << tmp->GetPriority() << ") ";
@@ -59,8 +63,8 @@ int main()
 	}
 	std::cout << "Size = " << list.GetSize() << std::endl;
 
-
-	std::cout << list.Front()->GetData() << std::endl;
-
+	std::cout << "\n--------------- Call Front() ----------------" << std::endl;
+	std::cout << list.Front()->GetData() << "(" << list.Front()->GetPriority() << ") ";
+	std::cout << "Size = " << list.GetSize() << std::endl;
 	return 0;
 }
